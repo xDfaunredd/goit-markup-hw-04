@@ -113,6 +113,23 @@ img {
   gap: 40px;
 }
 
+.header-item:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-item:first-child::after {
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  background-color: #404bbf;
+  content: "";
+}
+
+.header-item:first-child .header-link {
+  color: #404bbf;
+}
+
 .header-link {
   font-weight: 500;
   font-size: 16px;
@@ -122,6 +139,7 @@ img {
   display: inline-block;
   padding: 24px 0;
 }
+
 .header-link:hover,
 .header-link:focus {
   color: #404bbf;
@@ -156,6 +174,15 @@ img {
 
 .service {
   background-color: #2e2f42;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 188px 0;
 }
 
@@ -210,6 +237,21 @@ img {
 
 .strategies-list-item {
   flex-basis: calc((100% - 72px) / 4);
+}
+
+.strategies-container {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  background: #f4f4fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.strategies-icon {
 }
 
 .strategies-list-title {
@@ -285,8 +327,33 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 
   text-align: center;
+}
+
+.team-icon-list {
+  display: flex;
+  gap: 24px;
+  padding: 0 16px;
+}
+
+.team-icon-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+.team-icon-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-icon-link:hover {
+  background-color: #31d0aa;
 }
 
 /* ----------------TEAM----------------*/
