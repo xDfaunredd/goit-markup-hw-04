@@ -115,11 +115,15 @@ img {
   gap: 40px;
 }
 
-.header-item:first-child {
+/* .header-item:first-child {
+  position: relative;
+} */
+
+.header-item:first-child .header-link {
   position: relative;
 }
 
-.header-item:first-child::after {
+.header-item:first-child .header-link::after {
   border-radius: 2px;
   width: 48px;
   height: 4px;
@@ -515,5 +519,10 @@ img {
 
 .footer .team-icon-list {
   padding: 0;
+}
+
+.footer .team-icon-link:hover,
+.footer .team-icon-link:focus {
+  background-color: #31d0aa;
 }
 /* ----------------FOOTER---------------- */
