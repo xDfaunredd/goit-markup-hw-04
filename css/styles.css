@@ -76,7 +76,8 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
-  position: relative;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header > .container {
@@ -115,7 +116,7 @@ img {
 }
 
 .header-item:first-child {
-  display: flex;
+  position: relative;
 }
 
 .header-item:first-child::after {
@@ -125,6 +126,7 @@ img {
   background-color: #404bbf;
   content: "";
   position: absolute;
+  left: 0;
   bottom: -1px;
 }
 
@@ -190,6 +192,8 @@ img {
   background-position: center;
   background-size: cover;
   padding: 188px 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .service-button {
@@ -340,6 +344,7 @@ img {
 .team-icon-list {
   display: flex;
   gap: 24px;
+  justify-content: center;
   padding: 0 16px;
 }
 
@@ -358,8 +363,13 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icon-link:hover {
-  background-color: #31d0aa;
+.team-icon-link:hover,
+.team-icon-link:focus {
+  background-color: #404bbf;
+}
+
+.team-icon-icon {
+  fill: #f4f4fd;
 }
 
 /* ----------------TEAM----------------*/
@@ -413,7 +423,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  padding: 32px 40px;
+  padding: 40px 32px;
   background-color: #4d5ae5;
   color: #f4f4fd;
 
